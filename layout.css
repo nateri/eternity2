@@ -6,41 +6,39 @@ http://stackoverflow.com/questions/17141961/css-layout-with-fixed-top-and-bottom
 https://css-tricks.com/almanac/properties/m/max-height/
 */
 *
-{
-  margin:0;padding:0;
+
+div.container {
+  width: 100%;
+  border: 1px solid gray;
 }
-html,body
-{
-  height: 100%;
+
+header, footer {
+  padding: 1em;
+  color: white;
+  background-color: black;
+  clear: left;
+  text-align: center;
 }
-header,footer,div
-{
- width: 100%; 
+
+nav {
+  float: left;
+  max-width: 660px;
+  margin: 0;
+  padding: 1em;
 }
-.container
-{
-  height: 100%;
-  background: #F6F6F6;
-  margin: -64px 0;
-  padding: 64px 0;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
-.content_divs {
-  overflow:auto;
-  height:100%;
+ 
+nav ul a {
+  text-decoration: none;
 }
-header
-{
-  height: 64px;
-  background: #F6F6F6;
-  position: relative;
-  z-index:1;
-}
-footer
-{
-  height: 64px;
-  background: #F6F6F6;
-  position: relative;
-  z-index:1;
+
+article {
+  margin-left: 670px;
+  border-left: 1px solid gray;
+  padding: 1em;
+  overflow: hidden;
 }
