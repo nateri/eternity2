@@ -160,12 +160,12 @@ var NeeternityView = function () {
 			}, [*/
 				m("nav", {
 					id: vm.BoardDivId(),
-					//class: "split content",
+					class: "board",
 					config : this.boardRedraw,
 					}, []),
 				m("article", {
 					id: vm.LegendDivId(),
-					//class: "split content pretty_bg",
+					class: "legend",
 					//config : this.legendRedraw,
 					}, [
 						m("p", "Test"),
@@ -325,19 +325,18 @@ var PageView = {
 		return [
 			m("div", {
 				id: "neeternity",
-				class: "container",
+				class: "page pretty_bg",
 			}, [
 				m("header", null, [
-					m("h1", "Title...")
-					/*
 					m("nav", {
-						class: "container pretty_bg",
+						id: "nav_head",
+						class: "title",
 					}, [
 						m("a", {
 							href : "/",
 							class : "logo",
 							config : m.route,
-						}, "E2"),
+						}, "Eternity 2"),
 						m("a", {
 							href: "/about",
 							config : m.route,
@@ -347,7 +346,6 @@ var PageView = {
 							config : m.route,
 						}, "Login"),
 					]),
-					*/
 				]),
 				eternity_content,
 				m("footer", null, [
