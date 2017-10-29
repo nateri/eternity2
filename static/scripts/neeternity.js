@@ -377,50 +377,63 @@ var Landing = {
 
 	get_page : function(landing_content) {
 		return [
-			m("header", null, [
-				m("nav", {
-					class: "container pretty_bg",
-				}, [
-					m("a", {
-						href : "/",
-						class : "logo",
-						config : m.route,
-					}, "E2"),
-					m("a", {
-						href: "/about",
-						config : m.route,
-					}, "About"),
-					m("a", {
-						href : "/login",
-						config : m.route,
-					}, "Login"),
-				]),
-			]),
-			m("section", {
-				class: "content pretty_bg",
+			m("div", {
+				id: "neeternity",
+				class: "page pretty_bg",
 			}, [
-				m("div", {
-					id: "landing",
-					class: "content",
-				}, [
-					/* landing_content*/
-					m("h2", "Eternity2 Puzzle Search Space Explorer"),
-					m("h3", "As our server crunches numbers, you can explore its results"),
-					m("p", "Status: " + vm.Status()),
+				m("header", null, [
+					m("nav", {
+						id: "nav_head",
+						class: "title",
+					}, [
+						m("a", {
+							href : "/",
+							class : "logo",
+							config : m.route,
+						}, "Eternity 2"),
+						m("a", {
+							href: "/about",
+							config : m.route,
+						}, "About"),
+						m("a", {
+							href : "/login",
+							config : m.route,
+						}, "Login"),
+					]),
 				]),
-			]),
-			m("footer", null, [
-				m("div", {
-					class: "container pretty_bg",
-				}, [
-				])
-			]),
-		]
+				landing_content,
+				m("footer", null, [
+					m("p", "Copyright...")
+					/*
+					m("div", {
+						class: "container pretty_bg",
+					}, [
+						m("p", "All Rights Reserved"),
+						m("p", "© 2016 Nathan Rickey"),
+					])
+					*/
+				]),
+			])
+		] // end of return
 	},
 
 	view : function () {
 		console.log("[Landing.view]")
-		return this.get_page("unused")
+		/* landing_content*/
+		var landing_content = 
+			m("div", {
+				id: "landing_div",
+			}, [
+				m("div", {
+					class: "landing_container",
+				}, [
+					m("h2", "Eternity2 Puzzle Search Space Explorer"),
+					m("h3", "As our server crunches numbers, you can explore its results"),
+					m("p", "Status: " + vm.Status()),
+				]),
+			])
+				
+		return this.get_page(landing_content)
 	},
 }
 

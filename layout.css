@@ -30,6 +30,14 @@ header {
   padding: 15px;
 }
 
+#landing_div {
+  padding: 15px 30px;
+}
+.landing_container {
+  background-color: rgba(116, 117, 185, 0.6);
+  color: cornsilk;
+}
+
 .title
 {
   height: 100%;
