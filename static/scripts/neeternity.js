@@ -168,7 +168,11 @@ var NeeternityView = function () {
 					class: "legend",
 					//config : this.legendRedraw,
 					}, [
-						m("p", "Test"),
+						m("div", {
+							class: "content",
+						}, [
+							m("p", "Test"),
+						])
 					]),
 				/*]),*/
 			]

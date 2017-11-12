@@ -77,18 +77,24 @@ div.page {
 }
 
 
-nav.board {
+.board {
   float: left;
   max-width: 660px;
   margin: 0;
   padding: 5px 15px;
 }
 
+.legend {
+  padding: 5px 15px;
+}
+.content {
+  background-color: rgba(106, 132, 189, 0.6);
+}
 
 article {
   margin-left: 670px;
   border-left: 1px solid gray;
-  padding: 1em;
   overflow: hidden;
+  padding: 5px 15px;
 }
 
